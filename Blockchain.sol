@@ -4,7 +4,6 @@ contract reva{
     
     struct details{
         string name;
-        uint256 age;
         string lane;
         string city;
         string state;
@@ -13,14 +12,14 @@ contract reva{
         uint256 month;
         uint256 year;
         uint256 imei;
+        uint256 addPlantDDMMYYYY;
     }
     
     mapping (uint => details) individualFile;
     
-    function individual(string memory Name, uint256 Age,string memory Lane,string memory City,string memory State,int256 Pincode, uint Date, uint Month, uint Year, uint256 Imei) public{
+    function individual(string memory Name,string memory Lane,string memory City,string memory State,int256 Pincode, uint Date, uint Month, uint Year, uint256 Imei, uint256 AddPlantDDMMYYYY) public{
         details memory Person;
         Person.name=Name;
-        Person.age=Age;
         Person.lane = Lane;
         Person.city=City;
         Person.state=State;
@@ -29,13 +28,13 @@ contract reva{
         Person.month=Month;
         Person.year=Year;
         Person.imei=Imei;
+        Person.addPlantDDMMYYYY=AddPlantDDMMYYYY;
         individualFile[Imei]=Person;
     }
     
-    function PersonDetails(uint256 Imei) public view returns (string memory PersonName, uint256 PersonAge,string memory Personlane,string memory Personcity,string memory Personstate,int256 Personpincode, uint Persondate, uint Personmonth, uint Personyear ){
+    function PersonDetails(uint256 Imei) public view returns (string memory PersonName,string memory Personlane,string memory Personcity,string memory Personstate,int256 Personpincode, uint Persondate, uint Personmonth, uint Personyear, uint256 Add_Plant_DDMMYYYY ){
         details memory Person = individualFile[Imei];
         PersonName=Person.name;
-        PersonAge=Person.age;
         Personlane=Person.lane;
         Personcity=Person.city;
         Personstate=Person.state;
@@ -43,7 +42,8 @@ contract reva{
         Persondate=Person.date;
         Personmonth=Person.month;
         Personyear=Person.year;
-        return(PersonName,PersonAge,Personlane,Personcity,Personstate,Personpincode,Persondate,Personmonth,Personyear);
+        Add_Plant_DDMMYYYY=Person.addPlantDDMMYYYY;
+        return(PersonName,Personlane,Personcity,Personstate,Personpincode,Persondate,Personmonth,Personyear,Add_Plant_DDMMYYYY);
     }
      
 }
