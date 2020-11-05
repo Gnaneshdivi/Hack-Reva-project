@@ -1,3 +1,4 @@
+import 'package:PLANTIFY/bori.dart';
 import 'package:flutter/material.dart';
 import 'package:imei_plugin/imei_plugin.dart';
 import 'package:line_icons/line_icons.dart';
@@ -170,22 +171,33 @@ class _IntropageState extends State<Intropage> {
                     child: Card(
                       elevation: 20,
                       color: Colors.transparent,
-                      child: Container(
-                        height: 50,
-                        width: width * 0.7,
-                        child: Center(
-                            child: Text(
-                          "LET'S SAVE THE PLANET",
-                          style: TextStyle(color: Colors.black, fontSize: 20),
-                        )),
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(
-                              width: 2,
-                              color: Colors.blue,
-                            ),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Comind(
+                                      imei: id,
+                                    )),
+                          );
+                        },
+                        child: Container(
+                          height: 50,
+                          width: width * 0.7,
+                          child: Center(
+                              child: Text(
+                            "LET'S SAVE THE PLANET",
+                            style: TextStyle(color: Colors.black, fontSize: 20),
+                          )),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(
+                                width: 2,
+                                color: Colors.blue,
+                              ),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20))),
+                        ),
                       ),
                     ),
                   ),
