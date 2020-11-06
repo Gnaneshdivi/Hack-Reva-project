@@ -23,6 +23,7 @@ Confusion matrix :
 ## Further details :
 
 No.Epochs = 50
+
 Bacth size = 16
 
 Learning rate = 0.001
