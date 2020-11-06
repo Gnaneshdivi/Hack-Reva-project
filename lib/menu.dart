@@ -24,7 +24,7 @@ class _MenuWidgetState extends State<MenuWidget> {
             backgroundColor: Colors.grey,
             child: CircleAvatar(
               radius: 60,
-              backgroundImage: AssetImage('assets/images/user_profile.jpg'),
+              backgroundImage: AssetImage('assets/p1.png'),
             ),
           ),
           SizedBox(

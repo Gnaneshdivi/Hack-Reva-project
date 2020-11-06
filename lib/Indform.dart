@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:PLANTIFY/dashboard.dart';
+import 'package:PLANTIFY/home.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 

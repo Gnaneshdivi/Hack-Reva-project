@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get_ip/get_ip.dart';
 import 'package:image_picker/image_picker.dart';
 
-import 'dashboard.dart';
+import 'home.dart';
 
 class ComForm extends StatefulWidget {
   final imei;
