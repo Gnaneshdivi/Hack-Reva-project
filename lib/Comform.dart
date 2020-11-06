@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get_ip/get_ip.dart';
 import 'package:image_picker/image_picker.dart';
 
+import 'dashboard.dart';
+
 class ComForm extends StatefulWidget {
   final imei;
 
@@ -387,7 +389,8 @@ class _ComFormState extends State<ComForm> {
                               cursorColor: Colors.blue,
                               decoration: InputDecoration(
                                 hintText: "AREA",
-                                hintStyle: TextStyle(color: Colors.green),
+                                hintStyle: TextStyle(
+                                    color: Colors.green, fontSize: 10),
                                 border: InputBorder.none,
                               ),
                             ),
@@ -465,7 +468,12 @@ class _ComFormState extends State<ComForm> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 100, vertical: 30),
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Dashboard()),
+                        );
+                      },
                       child: Container(
                         height: 50,
                         width: width * 0.5,

@@ -5,9 +5,13 @@ class Dashboard extends StatefulWidget {
   _DashboardState createState() => _DashboardState();
 }
 
+Color backgroundColor = Color.fromRGBO(130, 205, 113, 1);
+
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: backgroundColor,
+    );
   }
 }

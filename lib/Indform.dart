@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:PLANTIFY/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -133,6 +134,8 @@ class _IndformState extends State<Indform> {
                               cursorColor: Colors.blue,
                               decoration: InputDecoration(
                                 hintText: "NAME",
+                                hintStyle: TextStyle(
+                                    color: Colors.green, fontSize: 10),
                                 border: InputBorder.none,
                               ),
                             ),
@@ -190,7 +193,9 @@ class _IndformState extends State<Indform> {
                                   onChanged: (value) {},
                                   cursorColor: Colors.blue,
                                   decoration: InputDecoration(
-                                    hintText: "NAME",
+                                    hintText: "DD",
+                                    hintStyle: TextStyle(
+                                        color: Colors.green, fontSize: 10),
                                     border: InputBorder.none,
                                   ),
                                 ),
@@ -229,7 +234,9 @@ class _IndformState extends State<Indform> {
                                   onChanged: (value) {},
                                   cursorColor: Colors.blue,
                                   decoration: InputDecoration(
-                                    hintText: "NAME",
+                                    hintText: "MM",
+                                    hintStyle: TextStyle(
+                                        color: Colors.green, fontSize: 10),
                                     border: InputBorder.none,
                                   ),
                                 ),
@@ -268,7 +275,9 @@ class _IndformState extends State<Indform> {
                                   onChanged: (value) {},
                                   cursorColor: Colors.blue,
                                   decoration: InputDecoration(
-                                    hintText: "NAME",
+                                    hintText: "YYYY",
+                                    hintStyle: TextStyle(
+                                        color: Colors.green, fontSize: 10),
                                     border: InputBorder.none,
                                   ),
                                 ),
@@ -313,7 +322,8 @@ class _IndformState extends State<Indform> {
                             cursorColor: Colors.blue,
                             decoration: InputDecoration(
                               hintText: "Lane",
-                              hintStyle: TextStyle(color: Colors.green),
+                              hintStyle:
+                                  TextStyle(color: Colors.green, fontSize: 10),
                               border: InputBorder.none,
                             ),
                           ),
@@ -337,7 +347,8 @@ class _IndformState extends State<Indform> {
                               cursorColor: Colors.blue,
                               decoration: InputDecoration(
                                 hintText: "AREA",
-                                hintStyle: TextStyle(color: Colors.green),
+                                hintStyle: TextStyle(
+                                    color: Colors.green, fontSize: 10),
                                 border: InputBorder.none,
                               ),
                             ),
@@ -365,7 +376,8 @@ class _IndformState extends State<Indform> {
                                   cursorColor: Colors.blue,
                                   decoration: InputDecoration(
                                     hintText: "CITY/TOWN",
-                                    hintStyle: TextStyle(color: Colors.green),
+                                    hintStyle: TextStyle(
+                                        color: Colors.green, fontSize: 10),
                                     border: InputBorder.none,
                                   ),
                                 ),
@@ -415,7 +427,12 @@ class _IndformState extends State<Indform> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 100, vertical: 30),
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Dashboard()),
+                        );
+                      },
                       child: Container(
                         height: 50,
                         width: width * 0.5,
