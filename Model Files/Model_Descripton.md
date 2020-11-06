@@ -17,7 +17,7 @@ The accuracy per class found on testing is :
 
 Confusion matrix :
 
-![Optional Text](..\Model Files\Confusion matrix.png)
+![Optional Text](https://github.com/Gnaneshdivi/Hack-Reva-project/blob/master/Model%20Files/Confusion%20matrix.png)
 
 
 ## Further details :
