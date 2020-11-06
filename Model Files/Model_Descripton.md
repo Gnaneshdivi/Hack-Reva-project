@@ -19,6 +19,13 @@ The accuracy per class found on testing is :
 ![Optional Text](https://github.com/Gnaneshdivi/Hack-Reva-project/blob/master/Model%20Files/Confusion%20matrix.png)
 
 
+## Accuracy per Epoch
+![Opt text](https://github.com/Gnaneshdivi/Hack-Reva-project/blob/master/Model%20Files/Accuracy%20per%20epoch.png)
+
+## Loss per Epoch
+![Opt text](https://github.com/Gnaneshdivi/Hack-Reva-project/blob/master/Model%20Files/Loss%20per%20epoch.png)
+
+
 ## Further details :
 
 No.Epochs = 50
