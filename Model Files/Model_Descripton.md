@@ -6,7 +6,6 @@ The accuracy per class found on testing is :
 
 
 
-
 | Class         | Accuracy        | #Samples   |
 | :------------ |:---------------:| -----:     |
 | Mango         | 0.37              |  19      |
@@ -15,7 +14,7 @@ The accuracy per class found on testing is :
 | Neem          | 0.81              |  63      |
 
 
-Confusion matrix :
+## Confusion matrix :
 
 ![Optional Text](https://github.com/Gnaneshdivi/Hack-Reva-project/blob/master/Model%20Files/Confusion%20matrix.png)
 
@@ -23,6 +22,7 @@ Confusion matrix :
 ## Further details :
 
 No.Epochs = 50
+
 Bacth size = 16
 
 Learning rate = 0.001
