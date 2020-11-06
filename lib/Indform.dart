@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class Indform extends StatefulWidget {
   final imei;
@@ -11,6 +14,21 @@ class Indform extends StatefulWidget {
 Color backgroundColor = Color.fromRGBO(130, 205, 113, 1);
 
 class _IndformState extends State<Indform> {
+  File _image;
+  final picker = ImagePicker();
+
+  Future getImage() async {
+    final pickedFile = await picker.getImage(source: ImageSource.gallery);
+
+    setState(() {
+      if (pickedFile != null) {
+        _image = File(pickedFile.path);
+      } else {
+        print('No image selected.');
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -64,17 +82,36 @@ class _IndformState extends State<Indform> {
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             vertical: 15.0, horizontal: 30),
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(
-                                width: 2,
-                                color: Colors.green,
-                              ),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10))),
-                          height: height * 0.12,
-                          width: width * 0.25,
+                        child: GestureDetector(
+                          onTap: () {
+                            getImage();
+                            setState(() {});
+                          },
+                          child: Container(
+                            child: _image == null
+                                ? Center(
+                                    child: Text(
+                                    'Upload Logo',
+                                    style: TextStyle(
+                                        color: Colors.black, fontSize: 14),
+                                  ))
+                                : Image.file(
+                                    _image,
+                                    fit: BoxFit.cover,
+                                    height: height * 0.08,
+                                    width: width * 0.20,
+                                  ),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(
+                                  width: 2,
+                                  color: Colors.green,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(30))),
+                            height: height * 0.12,
+                            width: width * 0.25,
+                          ),
                         ),
                       ),
                       Column(
@@ -291,9 +328,10 @@ class _IndformState extends State<Indform> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 5.0),
+                          padding: const EdgeInsets.symmetric(vertical: 1.0),
                           child: Container(
                             child: TextField(
+                              keyboardType: TextInputType.number,
                               style: TextStyle(color: Colors.grey),
                               onChanged: (value) {},
                               cursorColor: Colors.blue,
@@ -315,58 +353,67 @@ class _IndformState extends State<Indform> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 5.0),
-                          child: Container(
-                            child: TextField(
-                              style: TextStyle(color: Colors.grey),
-                              onChanged: (value) {},
-                              cursorColor: Colors.blue,
-                              decoration: InputDecoration(
-                                hintText: "CITY/TOWN",
-                                hintStyle: TextStyle(color: Colors.green),
-                                border: InputBorder.none,
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 3.0, horizontal: 28),
+                          child: Row(
+                            children: [
+                              Container(
+                                child: TextField(
+                                  keyboardType: TextInputType.number,
+                                  style: TextStyle(color: Colors.grey),
+                                  onChanged: (value) {},
+                                  cursorColor: Colors.blue,
+                                  decoration: InputDecoration(
+                                    hintText: "CITY/TOWN",
+                                    hintStyle: TextStyle(color: Colors.green),
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                                margin: EdgeInsets.symmetric(vertical: 10),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 20, vertical: 5),
+                                width: width * 0.5,
+                                height: height * 0.06,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
                               ),
-                            ),
-                            margin: EdgeInsets.symmetric(vertical: 10),
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 5),
-                            width: width * 0.8,
-                            height: height * 0.06,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 5.0),
-                          child: Container(
-                            child: TextField(
-                              style: TextStyle(color: Colors.grey),
-                              onChanged: (value) {},
-                              cursorColor: Colors.blue,
-                              decoration: InputDecoration(
-                                hintText: "PIN CODE",
-                                hintStyle: TextStyle(color: Colors.green),
-                                border: InputBorder.none,
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 10.0),
+                                child: Container(
+                                  child: TextField(
+                                    keyboardType: TextInputType.number,
+                                    style: TextStyle(color: Colors.grey),
+                                    onChanged: (value) {},
+                                    cursorColor: Colors.blue,
+                                    decoration: InputDecoration(
+                                      hintText: "PIN CODE",
+                                      hintStyle: TextStyle(color: Colors.green),
+                                      border: InputBorder.none,
+                                    ),
+                                  ),
+                                  margin: EdgeInsets.symmetric(vertical: 10),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 20, vertical: 5),
+                                  width: width * 0.23,
+                                  height: height * 0.06,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
+                                ),
                               ),
-                            ),
-                            margin: EdgeInsets.symmetric(vertical: 10),
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 5),
-                            width: width * 0.8,
-                            height: height * 0.06,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
+                            ],
                           ),
                         ),
                       ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 100),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 100, vertical: 30),
                     child: GestureDetector(
                       onTap: () {},
                       child: Container(

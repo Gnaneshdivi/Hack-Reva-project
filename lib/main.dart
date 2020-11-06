@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         brightness: Brightness.dark,
         fontFamily: 'Deligne',
+        // ignore: deprecated_member_use
         textTheme: TextTheme(body1: TextStyle(fontSize: 28)),
       ),
       home: Intropage(),
