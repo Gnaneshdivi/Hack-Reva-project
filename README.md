@@ -45,13 +45,16 @@ The app also includes a Machine learning based algorithm which classifies differ
 We also tried to give the users a smooth UI experience 💚✨💚:
 
 <div align = 'center'>
-<img src = 'Images\Firstpage_iplant.png' height = 400>&nbsp; &nbsp; &nbsp;  <img src= 'Images\Froms_Iplant.png' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Category page.jpg' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Add a plant.jpg' height = 400>
+<img src = 'Images\Firstpage_iplant.png' height = 400>&nbsp; &nbsp; &nbsp;  <img src= 'Images\Froms_Iplant.png' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Choice.png' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Company form.png' height = 400>
+
 </div>
 
 </br>
 
 <div align = 'center'>
-<img src = 'Images\Nurture.jpg' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Preferred plants.jpg' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\My plants.jpg' height = 400>
+<img src = 'Images\Nurture.jpg' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Preferred plants.jpg' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\My plants.jpg' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Add a plant.jpg' height = 400>
+</br>
+<img src = 'Images\blockchain.png'>
 </div>
 
 
