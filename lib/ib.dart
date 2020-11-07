@@ -30,10 +30,11 @@ class Ib extends StatefulWidget {
     this.year,
   }) : super(key: key);
   @override
-  _IbState createState() => _IbState();
+  _IbState createState() => _IbState(pincode);
 }
 
 class _IbState extends State<Ib> {
+  final pincode;
   Client httpClint;
 
   Web3Client ethclint;
@@ -42,10 +43,15 @@ class _IbState extends State<Ib> {
   bool busy = true;
 
   final myaddress = "0x52c8777570f8532A4482922DAAdb0B27e759ef02";
-  String contractadd = "0xf9c1718Df31080F74AF74Fa20dD907c15370a498";
+  String contractadd = "0xB021FeA989823c14E4985afAB235427b48EBe8fD";
+
+  _IbState(this.pincode);
   @override
   void initState() {
     super.initState();
+    print(widget.name);
+    print(widget.imei);
+    print(pincode);
     now = DateTime.now();
     httpClint = Client();
     ethclint = Web3Client(
@@ -77,18 +83,19 @@ class _IbState extends State<Ib> {
       widget.lane,
       widget.city,
       widget.state,
-      BigInt.from(widget.pincode),
-      widget.date,
-      widget.month,
-      widget.year,
-      BigInt.from(widget.imei),
-      BigInt.from(000000)
+      BigInt.from(00000),
+      BigInt.from(00),
+      BigInt.from(00),
+      BigInt.from(00),
+      BigInt.from(00038),
+      BigInt.from(000000),
     ]);
 
     print(mydata);
     setState(() {
       busy = false;
     });
+    return result;
   }
 
   @override

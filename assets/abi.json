@@ -2,64 +2,6 @@
 	{
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "Name",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "Lane",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "City",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "State",
-				"type": "string"
-			},
-			{
-				"internalType": "int256",
-				"name": "Pincode",
-				"type": "int256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "Date",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "Month",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "Year",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "Imei",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "AddPlantDDMMYYYY",
-				"type": "uint256"
-			}
-		],
-		"name": "individual",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
 				"internalType": "uint256",
 				"name": "Imei",
 				"type": "uint256"
@@ -114,6 +56,64 @@
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "Name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "Lane",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "City",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "State",
+				"type": "string"
+			},
+			{
+				"internalType": "int256",
+				"name": "Pincode",
+				"type": "int256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "Date",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "Month",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "Year",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "Imei",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "AddPlantDDMMYYYY",
+				"type": "uint256"
+			}
+		],
+		"name": "individual",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]

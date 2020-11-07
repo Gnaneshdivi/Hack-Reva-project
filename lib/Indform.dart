@@ -472,22 +472,19 @@ class _IndformState extends State<Indform> {
                     child: GestureDetector(
                       onTap: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  /*Ib(
-                                    imei: widget.imei,
-                                    city: city,
-                                    lane: lane,
-                                    name: name,
-                                    pincode: pincode,
-                                    state: state,
-                                    date: date,
-                                    month: month,
-                                    year: year,
-                                  )*/
-                                  Dashboard()),
-                        );
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Ib(
+                                      imei: widget.imei,
+                                      city: city,
+                                      lane: lane,
+                                      name: name,
+                                      pincode: pincode,
+                                      state: state,
+                                      date: date,
+                                      month: month,
+                                      year: year,
+                                    )));
                       },
                       child: Container(
                         height: 50,
