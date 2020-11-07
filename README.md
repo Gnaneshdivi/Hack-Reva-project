@@ -55,7 +55,7 @@ We also tried to give the users a smooth UI experience 💚✨💚:
 <img src = 'Images\Nurture.jpg' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Preferred plants.jpg' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\My plants.jpg' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Add a plant.jpg' height = 400>
 </br>
 <p> Blockchain Integration
-<img src = 'Images\blockchain.png' width = 600 height =  600>
+<img src = 'Images\blockchain.png' width = 1000 height =  600>
 </div>
 
 
