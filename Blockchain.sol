@@ -7,7 +7,7 @@ contract reva{
         string lane;
         string city;
         string state;
-        int256 pincode;
+        uint256 pincode;
         uint256 date;
         uint256 month;
         uint256 year;
@@ -17,7 +17,7 @@ contract reva{
     
     mapping (uint => details) individualFile;
     
-    function individual(string memory Name,string memory Lane,string memory City,string memory State,int256 Pincode, uint Date, uint Month, uint Year, uint256 Imei, uint256 AddPlantDDMMYYYY) public{
+    function individual(string memory Name,string memory Lane,string memory City,string memory State,uint256 Pincode, uint256 Date, uint256 Month, uint256 Year, uint256 Imei, uint256 AddPlantDDMMYYYY) public{
         details memory Person;
         Person.name=Name;
         Person.lane = Lane;
@@ -32,7 +32,7 @@ contract reva{
         individualFile[Imei]=Person;
     }
     
-    function PersonDetails(uint256 Imei) public view returns (string memory PersonName,string memory Personlane,string memory Personcity,string memory Personstate,int256 Personpincode, uint Persondate, uint Personmonth, uint Personyear, uint256 Add_Plant_DDMMYYYY ){
+    function PersonDetails(uint256 Imei) public view returns (string memory PersonName,string memory Personlane,string memory Personcity,string memory Personstate,uint256 Personpincode, uint256 Persondate, uint256 Personmonth, uint256 Personyear, uint256 Add_Plant_DDMMYYYY){
         details memory Person = individualFile[Imei];
         PersonName=Person.name;
         Personlane=Person.lane;
@@ -44,6 +44,7 @@ contract reva{
         Personyear=Person.year;
         Add_Plant_DDMMYYYY=Person.addPlantDDMMYYYY;
         return(PersonName,Personlane,Personcity,Personstate,Personpincode,Persondate,Personmonth,Personyear,Add_Plant_DDMMYYYY);
+        
     }
      
 }
