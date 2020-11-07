@@ -4,6 +4,8 @@ import 'package:PLANTIFY/home.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
+import 'ib.dart';
+
 class Indform extends StatefulWidget {
   final imei;
 
@@ -13,6 +15,14 @@ class Indform extends StatefulWidget {
 }
 
 Color backgroundColor = Color.fromRGBO(130, 205, 113, 1);
+String city;
+int pincode;
+String lane;
+String name;
+String state;
+int date;
+int month;
+int year;
 
 class _IndformState extends State<Indform> {
   File _image;
@@ -30,6 +40,7 @@ class _IndformState extends State<Indform> {
     });
   }
 
+  @override
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -130,7 +141,11 @@ class _IndformState extends State<Indform> {
                           Container(
                             child: TextField(
                               style: TextStyle(color: Colors.grey),
-                              onChanged: (value) {},
+                              onChanged: (value) {
+                                setState(() {
+                                  name = value;
+                                });
+                              },
                               cursorColor: Colors.blue,
                               decoration: InputDecoration(
                                 hintText: "NAME",
@@ -190,7 +205,11 @@ class _IndformState extends State<Indform> {
                               Container(
                                 child: TextField(
                                   style: TextStyle(color: Colors.grey),
-                                  onChanged: (value) {},
+                                  onChanged: (value) {
+                                    setState(() {
+                                      date = (value) as int;
+                                    });
+                                  },
                                   cursorColor: Colors.blue,
                                   decoration: InputDecoration(
                                     hintText: "DD",
@@ -231,7 +250,11 @@ class _IndformState extends State<Indform> {
                               Container(
                                 child: TextField(
                                   style: TextStyle(color: Colors.grey),
-                                  onChanged: (value) {},
+                                  onChanged: (value) {
+                                    setState(() {
+                                      month = (value) as int;
+                                    });
+                                  },
                                   cursorColor: Colors.blue,
                                   decoration: InputDecoration(
                                     hintText: "MM",
@@ -272,7 +295,11 @@ class _IndformState extends State<Indform> {
                               Container(
                                 child: TextField(
                                   style: TextStyle(color: Colors.grey),
-                                  onChanged: (value) {},
+                                  onChanged: (value) {
+                                    setState(() {
+                                      year = (value) as int;
+                                    });
+                                  },
                                   cursorColor: Colors.blue,
                                   decoration: InputDecoration(
                                     hintText: "YYYY",
@@ -318,7 +345,11 @@ class _IndformState extends State<Indform> {
                         Container(
                           child: TextField(
                             style: TextStyle(color: Colors.grey),
-                            onChanged: (value) {},
+                            onChanged: (value) {
+                              setState(() {
+                                lane = value;
+                              });
+                            },
                             cursorColor: Colors.blue,
                             decoration: InputDecoration(
                               hintText: "Lane",
@@ -343,10 +374,14 @@ class _IndformState extends State<Indform> {
                             child: TextField(
                               keyboardType: TextInputType.number,
                               style: TextStyle(color: Colors.grey),
-                              onChanged: (value) {},
+                              onChanged: (value) {
+                                setState(() {
+                                  city = value;
+                                });
+                              },
                               cursorColor: Colors.blue,
                               decoration: InputDecoration(
-                                hintText: "AREA",
+                                hintText: "CITY",
                                 hintStyle: TextStyle(
                                     color: Colors.green, fontSize: 10),
                                 border: InputBorder.none,
@@ -372,10 +407,14 @@ class _IndformState extends State<Indform> {
                                 child: TextField(
                                   keyboardType: TextInputType.number,
                                   style: TextStyle(color: Colors.grey),
-                                  onChanged: (value) {},
+                                  onChanged: (value) {
+                                    setState(() {
+                                      state = value;
+                                    });
+                                  },
                                   cursorColor: Colors.blue,
                                   decoration: InputDecoration(
-                                    hintText: "CITY/TOWN",
+                                    hintText: "STATE",
                                     hintStyle: TextStyle(
                                         color: Colors.green, fontSize: 10),
                                     border: InputBorder.none,
@@ -398,7 +437,11 @@ class _IndformState extends State<Indform> {
                                   child: TextField(
                                     keyboardType: TextInputType.number,
                                     style: TextStyle(color: Colors.grey),
-                                    onChanged: (value) {},
+                                    onChanged: (value) {
+                                      setState(() {
+                                        pincode = (value) as int;
+                                      });
+                                    },
                                     cursorColor: Colors.blue,
                                     decoration: InputDecoration(
                                       hintText: "PIN CODE",
@@ -430,7 +473,20 @@ class _IndformState extends State<Indform> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Dashboard()),
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  /*Ib(
+                                    imei: widget.imei,
+                                    city: city,
+                                    lane: lane,
+                                    name: name,
+                                    pincode: pincode,
+                                    state: state,
+                                    date: date,
+                                    month: month,
+                                    year: year,
+                                  )*/
+                                  Dashboard()),
                         );
                       },
                       child: Container(
