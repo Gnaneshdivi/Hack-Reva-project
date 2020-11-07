@@ -15,6 +15,10 @@
 
 
 # i$Plant
+<div align="center">
+  i$Plant.
+</div>
+
 ## 📈Increment savings💰💰, 📈Increment nature☘️ 🍀…
 November 04, 2020
 
