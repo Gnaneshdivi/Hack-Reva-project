@@ -10,6 +10,7 @@
   <p>📈Increment savings💰💰, 📈Increment nature 🌱🌳</p>
 </div>
 
+
 Check out our amazing app by installing from here :
 https://drive.google.com/file/d/1O6nM8-cMtogjJnZVxPDpaOhO7fS4ZKBt/view?usp=sharing
 
@@ -68,13 +69,10 @@ Python3, Open CV, Tensorflow lite, Keras, Blockchain, Ethereum, Matic, Flutter, 
 
 
 
-## TEAM Binary :
+## Team Binary :
 
 - [Divi Gnanesh](https://github.com/Gnaneshdivi)
-
 - [Naga Nithin](https://github.com/naganithin)
-
 - [G Lakshmi Sai Bhargavi](https://github.com/lakshmisaibhargavi)
-
 - [Prathyusha Guduru](https://github.com/Prathyusha-Guduru)
 
