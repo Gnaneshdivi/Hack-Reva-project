@@ -45,7 +45,7 @@ The app also includes a Machine learning based algorithm which classifies differ
 We also tried to give the users a smooth UI experience 💚✨💚:
 
 <div align = 'center'>
-<img src = 'Images\Firstpage_iplant.png' height = 400>&nbsp; &nbsp; &nbsp;  <img src= 'Images\Froms_Iplant.png' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Choice.png' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Company form.png' height = 400>
+<img src = 'Images\Firstpage_iplant.png' height = 400>&nbsp; &nbsp; &nbsp;  <img src= 'Images\Froms_Iplant.png' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Choice.png' height = 400>&nbsp; <img src = 'Images\Company form.png' height = 400>
 
 </div>
 
