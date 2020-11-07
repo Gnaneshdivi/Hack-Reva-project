@@ -41,11 +41,18 @@ The working of the application 📱📁 deals with the informationwhich will be 
 The money generated from the surveys and will be further spent in the following ways, i.e.,  
 * Maintenance of the application 
 * Rewards for users planting a sapling and filling the form data. 
-The app also includes a Machine learning based algorithm which classifies different plants based on their leaves so that users will not have the trouble to identify their plants and the family of the plant they want to grow.
+The app also includes a Machine learning based algorithm which classifies different plants based on their leaves so that users will not have the trouble to identify their plants and the family of the plant they want to grow.</br>
 We also tried to give the users a smooth UI experience 💚✨💚:
 
-<img src = 'Images\Firstpage_iplant.png'>&nbsp; &nbsp; <img src= 'Images\Froms_Iplant.png'>
+<div align = 'center'>
+<img src = 'Images\Firstpage_iplant.png' height = 400>&nbsp; &nbsp; &nbsp;  <img src= 'Images\Froms_Iplant.png' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Category page.jpg' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Add a plant.jpg' height = 400>
+</div>
 
+</br>
+
+<div align = 'center'>
+<img src = 'Images\Nurture.jpg' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\Preferred plants.jpg' height = 400>&nbsp; &nbsp; &nbsp;  <img src = 'Images\My plants.jpg' height = 400>
+</div>
 
 
 # Challenges we faced
