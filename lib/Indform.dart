@@ -452,6 +452,13 @@ class _IndformState extends State<Indform> {
               ),
             ),
           ),
+          Positioned(
+              top: height * 0.02,
+              right: 0,
+              child: Image.asset(
+                'assets/business-man.png',
+                height: height * 0.2,
+              )),
         ],
       ),
     );

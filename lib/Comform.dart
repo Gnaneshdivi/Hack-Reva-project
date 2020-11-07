@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get_ip/get_ip.dart';
 import 'package:image_picker/image_picker.dart';
 
-import 'home.dart';
-
 class ComForm extends StatefulWidget {
   final imei;
 
@@ -389,8 +387,7 @@ class _ComFormState extends State<ComForm> {
                               cursorColor: Colors.blue,
                               decoration: InputDecoration(
                                 hintText: "AREA",
-                                hintStyle: TextStyle(
-                                    color: Colors.green, fontSize: 10),
+                                hintStyle: TextStyle(color: Colors.green),
                                 border: InputBorder.none,
                               ),
                             ),
@@ -468,12 +465,7 @@ class _ComFormState extends State<ComForm> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 100, vertical: 30),
                     child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Dashboard()),
-                        );
-                      },
+                      onTap: () {},
                       child: Container(
                         height: 50,
                         width: width * 0.5,
@@ -493,6 +485,13 @@ class _ComFormState extends State<ComForm> {
               ),
             ),
           ),
+          Positioned(
+              top: height * 0.02,
+              right: 0,
+              child: Image.asset(
+                'assets/company.png',
+                height: height * 0.2,
+              )),
         ],
       ),
     );

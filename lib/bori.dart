@@ -21,6 +21,14 @@ class _ComindState extends State<Comind> {
       backgroundColor: backgroundColor,
       body: Stack(
         children: [
+          Positioned(
+              bottom: -height * 0.1,
+              left: -width * 0.8,
+              right: 0,
+              child: Image.asset(
+                'assets/individual.png',
+                height: height * 0.6,
+              )),
           Container(
             height: height,
             width: width,
@@ -47,14 +55,24 @@ class _ComindState extends State<Comind> {
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: const EdgeInsets.only(left: 30),
-                    child: Text(
-                      'CHOOSE CATEGORY',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: MediaQuery.of(context).size.shortestSide > 400
-                            ? 25
-                            : 18,
-                      ),
+                    child: Column(
+                      children: [
+                        Text(
+                          'CHOOSE CATEGORY',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize:
+                                MediaQuery.of(context).size.shortestSide > 400
+                                    ? 25
+                                    : 18,
+                          ),
+                        ),
+                        Container(
+                          color: Colors.brown,
+                          height: 2,
+                          width: width * 0.3,
+                        )
+                      ],
                     ),
                   ),
                 ),
@@ -125,11 +143,11 @@ class _ComindState extends State<Comind> {
             ),
           ),
           Positioned(
-            top: height * 0.05,
+            top: 0,
             right: 0,
             child: Image.asset(
-              'assets/p1.png',
-              height: height * 0.3,
+              'assets/p3.png',
+              height: height * 0.35,
               width: width * 0.4,
             ),
           ),
@@ -142,7 +160,15 @@ class _ComindState extends State<Comind> {
               height: height * 0.3,
               width: width * 0.4,
             ),
-          )
+          ),
+          Positioned(
+              top: height * 0.40,
+              left: 0,
+              right: -230,
+              child: Image.asset(
+                'assets/company.png',
+                height: height * 0.2,
+              )),
         ],
       ),
     );
