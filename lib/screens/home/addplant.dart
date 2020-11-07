@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:PLANTIFY/home.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tflite/tflite.dart';
 
 class Addplant extends StatefulWidget {
   @override
@@ -12,10 +13,68 @@ class Addplant extends StatefulWidget {
 Color backgroundColor = Color.fromRGBO(130, 205, 113, 1);
 
 class _AddplantState extends State<Addplant> {
-  File _image1;
   File _image2;
   File _image3;
   final picker = ImagePicker();
+  File _image;
+  String type;
+
+  List _outputs;
+
+  bool _loading = false;
+
+  Future getImage() async {
+    final pickedFile = await picker.getImage(source: ImageSource.gallery);
+
+    setState(() {
+      if (pickedFile != null) {
+        _image = File(pickedFile.path);
+      } else {
+        print('No image selected.');
+      }
+    });
+    classifyImage(_image);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _loading = true;
+
+    loadModel().then((value) {
+      setState(() {
+        _loading = false;
+      });
+    });
+  }
+
+  loadModel() async {
+    await Tflite.loadModel(
+      model: "assets/model_unquant.tflite",
+      labels: "assets/labels.txt",
+      numThreads: 1,
+    );
+  }
+
+  classifyImage(File image) async {
+    var output = await Tflite.runModelOnImage(
+        path: image.path,
+        imageMean: 0.0,
+        imageStd: 255.0,
+        numResults: 2,
+        threshold: 0.2,
+        asynch: true);
+    setState(() {
+      _loading = false;
+      print(output[0].label);
+      type = output[0].label;
+    });
+  }
+
+  void dispose() {
+    super.dispose();
+    Tflite.close();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -93,16 +152,12 @@ class _AddplantState extends State<Addplant> {
                                   source: ImageSource.gallery);
 
                               setState(() {
-                                if (pickedFile != null) {
-                                  _image1 = File(pickedFile.path);
-                                } else {
-                                  print('No image selected.');
-                                }
+                                getImage();
                               });
                               setState(() {});
                             },
                             child: Container(
-                              child: _image1 == null
+                              child: _image == null
                                   ? Center(
                                       child: Text(
                                       ' PLANT IMAGE',
@@ -110,7 +165,7 @@ class _AddplantState extends State<Addplant> {
                                           color: Colors.black, fontSize: 10),
                                     ))
                                   : Image.file(
-                                      _image1,
+                                      _image,
                                       fit: BoxFit.cover,
                                       height: height * 0.08,
                                       width: width * 0.20,
