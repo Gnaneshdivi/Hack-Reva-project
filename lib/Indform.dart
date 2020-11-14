@@ -249,6 +249,7 @@ class _IndformState extends State<Indform> {
                                     ),
                                     Container(
                                       child: TextField(
+                                        keyboardType: TextInputType.phone,
                                         style: TextStyle(color: Colors.grey),
                                         onChanged: (value) {
                                           setState(() {
@@ -268,7 +269,7 @@ class _IndformState extends State<Indform> {
                                           EdgeInsets.symmetric(vertical: 10),
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 20, vertical: 5),
-                                      width: width * 0.12,
+                                      width: width * 0.15,
                                       height: height * 0.06,
                                       decoration: BoxDecoration(
                                         color: Colors.white,
@@ -297,6 +298,7 @@ class _IndformState extends State<Indform> {
                                     ),
                                     Container(
                                       child: TextField(
+                                        keyboardType: TextInputType.phone,
                                         style: TextStyle(color: Colors.grey),
                                         onChanged: (value) {
                                           setState(() {
@@ -316,7 +318,7 @@ class _IndformState extends State<Indform> {
                                           EdgeInsets.symmetric(vertical: 10),
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 20, vertical: 5),
-                                      width: width * 0.12,
+                                      width: width * 0.15,
                                       height: height * 0.06,
                                       decoration: BoxDecoration(
                                         color: Colors.white,
@@ -345,6 +347,7 @@ class _IndformState extends State<Indform> {
                                     ),
                                     Container(
                                       child: TextField(
+                                        keyboardType: TextInputType.phone,
                                         style: TextStyle(color: Colors.grey),
                                         onChanged: (value) {
                                           setState(() {
@@ -426,7 +429,6 @@ class _IndformState extends State<Indform> {
                                     const EdgeInsets.symmetric(vertical: 1.0),
                                 child: Container(
                                   child: TextField(
-                                    keyboardType: TextInputType.number,
                                     style: TextStyle(color: Colors.grey),
                                     onChanged: (value) {
                                       setState(() {
@@ -459,7 +461,6 @@ class _IndformState extends State<Indform> {
                                   children: [
                                     Container(
                                       child: TextField(
-                                        keyboardType: TextInputType.number,
                                         style: TextStyle(color: Colors.grey),
                                         onChanged: (value) {
                                           setState(() {

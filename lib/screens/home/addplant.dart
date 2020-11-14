@@ -17,7 +17,7 @@ class _AddplantState extends State<Addplant> {
   File _image3;
   final picker = ImagePicker();
   File _image;
-  String type;
+  String type = '';
 
   List _outputs;
 
@@ -29,11 +29,11 @@ class _AddplantState extends State<Addplant> {
     setState(() {
       if (pickedFile != null) {
         _image = File(pickedFile.path);
+        classifyImage(_image);
       } else {
         print('No image selected.');
       }
     });
-    classifyImage(_image);
   }
 
   @override
@@ -66,8 +66,8 @@ class _AddplantState extends State<Addplant> {
         asynch: true);
     setState(() {
       _loading = false;
-      print(output[0].label);
-      type = output[0].label;
+      type = output[0]['label'];
+      print(output[0]['label']);
     });
   }
 
@@ -295,6 +295,45 @@ class _AddplantState extends State<Addplant> {
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
                           hintText: "NICK NAME",
+                          hintStyle:
+                              TextStyle(color: Colors.green, fontSize: 10),
+                          border: InputBorder.none,
+                        ),
+                      ),
+                      margin: EdgeInsets.symmetric(vertical: 10),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                      width: width * 0.5,
+                      height: height * 0.06,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: height * 0.01,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 15.0, vertical: 10),
+                    child: Text(
+                      " * Type",
+                      style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 45.0),
+                    child: Container(
+                      child: TextField(
+                        keyboardType: TextInputType.number,
+                        style: TextStyle(color: Colors.grey),
+                        cursorColor: Colors.blue,
+                        decoration: InputDecoration(
+                          hintText: type,
                           hintStyle:
                               TextStyle(color: Colors.green, fontSize: 10),
                           border: InputBorder.none,

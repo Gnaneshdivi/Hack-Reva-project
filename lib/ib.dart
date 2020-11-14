@@ -43,7 +43,7 @@ class _IbState extends State<Ib> {
   bool busy = true;
 
   final myaddress = "0x52c8777570f8532A4482922DAAdb0B27e759ef02";
-  String contractadd = "0xB021FeA989823c14E4985afAB235427b48EBe8fD";
+  String contractadd = "0xC7496DC168D2549C7b31f08AF99cBE4eE5402115";
 
   _IbState(this.pincode);
   @override
@@ -79,16 +79,17 @@ class _IbState extends State<Ib> {
   Future<void> gethi(String address) async {
     //EthereumAddress aa = EthereumAddress.fromHex(address);
     List<dynamic> result = await query("individual", [
-      widget.name,
-      widget.lane,
-      widget.city,
-      widget.state,
-      BigInt.from(00000),
-      BigInt.from(00),
-      BigInt.from(00),
-      BigInt.from(00),
-      BigInt.from(00038),
-      BigInt.from(000000),
+      widget.name, //name
+      BigInt.from(100), //age
+      widget.lane, //lane
+      widget.city, //city
+      widget.state, //state
+      BigInt.from(00000), //pincode
+      BigInt.from(10), //date
+      BigInt.from(10), //month
+      BigInt.from(2020), //year
+
+      BigInt.from(123), //imei
     ]);
 
     print(mydata);
